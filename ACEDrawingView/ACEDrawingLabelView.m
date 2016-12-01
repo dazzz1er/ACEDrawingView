@@ -140,14 +140,14 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         
         self.closeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.globalInset * 2, self.globalInset * 2)];
         [self.closeButton setAutoresizingMask:(UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin)];
-        self.closeButton.backgroundColor = [UIColor whiteColor];
+        self.closeButton.backgroundColor = [UIColor clearColor];
         self.closeButton.layer.cornerRadius = self.globalInset - 5;
         self.closeButton.userInteractionEnabled = YES;
         [self addSubview:self.closeButton];
         
         self.rotateButton = [[UIButton alloc] initWithFrame:CGRectMake(self.bounds.size.width-self.globalInset*2, self.bounds.size.height-self.globalInset*2, self.globalInset*2, self.globalInset*2)];
         [self.rotateButton setAutoresizingMask:(UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleTopMargin)];
-        self.rotateButton.backgroundColor = [UIColor whiteColor];
+        self.rotateButton.backgroundColor = [UIColor clearColor];
         self.rotateButton.layer.cornerRadius = self.globalInset - 5;
         self.rotateButton.contentMode = UIViewContentModeCenter;
         self.rotateButton.userInteractionEnabled = YES;
@@ -170,7 +170,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         [self setEnableMoveRestriction:NO];
         [self setEnableClose:YES];
         [self setEnableRotate:YES];
-        [self setShowsContentShadow:YES];
+        //[self setShowsContentShadow:YES];
         
         [self showEditingHandles];
         [self.labelTextField becomeFirstResponder];
